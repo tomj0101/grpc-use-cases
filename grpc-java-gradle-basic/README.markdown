@@ -90,3 +90,7 @@ plugin set up, so if you want to check for updates you can run:
 ```
 
 And then update `build.gradle` with the new versions accordingly.
+
+## References Link
+[Protocol Buffers - Developer Guide](https://developers.google.com/protocol-buffers/docs/overview)
+[Proto3 Data Type - Language Guide (proto3)](https://developers.google.com/protocol-buffers/docs/proto3)
