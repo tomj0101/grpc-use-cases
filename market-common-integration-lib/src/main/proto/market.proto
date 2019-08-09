@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package market;
+
+option java_multiple_files = true;
+option java_package = "com.github.tomj0101.grpc";
+option java_outer_classname = "MarketProto";
+
+enum Status {
+  OPEN = 0;
+  HIGHT = 1;
+  LOW = 2;
+}
+
+// The request message containing the user's name.
+message MarketSummaryRequest {
+  string symbol = 1;
+  int32 rate = 2;
+  repeated string rate2 = 3;
+  map<string, string> countryRate = 4;
+  Status status = 5;
+}
+
+// The response message containing the MarketSummary
+message MarketSummaryResponse {
+  string message = 1;
+  string symbol = 2;
+  int32 rate = 3;
+  repeated string rate2 = 4;
+  map<string, string> countryRate = 5;
+  Status status = 6;
+}
+
+// The MarketSummary service definition.
+service MarketSummary {
+  // Sends a MarketSummary
+  rpc GetResultTodayMarket (MarketSummaryRequest) returns (MarketSummaryResponse) {}
+  rpc GetWeekTodayMarket (MarketSummaryRequest) returns (MarketSummaryResponse) {}
+}
