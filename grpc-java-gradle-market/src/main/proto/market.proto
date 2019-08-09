@@ -12,6 +12,17 @@ enum Status {
   LOW = 2;
 }
 
+enum PhoneType {
+  MOBILE = 0;
+  HOME = 1;
+  WORK = 2;
+}
+
+message PhoneNumber {
+  string name = 1;
+  string number = 2;
+}
+
 // The request message containing the user's name.
 message MarketSummaryRequest {
   string symbol = 1;
@@ -19,6 +30,7 @@ message MarketSummaryRequest {
   repeated string rate2 = 3;
   map<string, string> countryRate = 4;
   Status status = 5;
+  repeated PhoneNumber phones = 6;
 }
 
 // The response message containing the MarketSummary
@@ -29,6 +41,7 @@ message MarketSummaryResponse {
   repeated string rate2 = 4;
   map<string, string> countryRate = 5;
   Status status = 6;
+  repeated PhoneNumber phones = 7;
 }
 
 // The MarketSummary service definition.

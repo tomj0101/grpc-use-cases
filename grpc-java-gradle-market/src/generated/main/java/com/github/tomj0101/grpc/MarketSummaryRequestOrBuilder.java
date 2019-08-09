@@ -83,4 +83,28 @@ public interface MarketSummaryRequestOrBuilder extends
    * <code>.market.Status status = 5;</code>
    */
   com.github.tomj0101.grpc.Status getStatus();
+
+  /**
+   * <code>repeated .market.PhoneNumber phones = 6;</code>
+   */
+  java.util.List<com.github.tomj0101.grpc.PhoneNumber> 
+      getPhonesList();
+  /**
+   * <code>repeated .market.PhoneNumber phones = 6;</code>
+   */
+  com.github.tomj0101.grpc.PhoneNumber getPhones(int index);
+  /**
+   * <code>repeated .market.PhoneNumber phones = 6;</code>
+   */
+  int getPhonesCount();
+  /**
+   * <code>repeated .market.PhoneNumber phones = 6;</code>
+   */
+  java.util.List<? extends com.github.tomj0101.grpc.PhoneNumberOrBuilder> 
+      getPhonesOrBuilderList();
+  /**
+   * <code>repeated .market.PhoneNumber phones = 6;</code>
+   */
+  com.github.tomj0101.grpc.PhoneNumberOrBuilder getPhonesOrBuilder(
+      int index);
 }

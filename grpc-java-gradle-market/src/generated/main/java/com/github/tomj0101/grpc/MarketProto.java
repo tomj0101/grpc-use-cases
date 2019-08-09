@@ -15,6 +15,11 @@ public final class MarketProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_market_PhoneNumber_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_market_PhoneNumber_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_market_MarketSummaryRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -43,26 +48,30 @@ public final class MarketProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014market.proto\022\006market\"\333\001\n\024MarketSummary" +
-      "Request\022\016\n\006symbol\030\001 \001(\t\022\014\n\004rate\030\002 \001(\005\022\r\n" +
-      "\005rate2\030\003 \003(\t\022B\n\013countryRate\030\004 \003(\0132-.mark" +
-      "et.MarketSummaryRequest.CountryRateEntry" +
-      "\022\036\n\006status\030\005 \001(\0162\016.market.Status\0322\n\020Coun" +
+      "\n\014market.proto\022\006market\"+\n\013PhoneNumber\022\014\n" +
+      "\004name\030\001 \001(\t\022\016\n\006number\030\002 \001(\t\"\200\002\n\024MarketSu" +
+      "mmaryRequest\022\016\n\006symbol\030\001 \001(\t\022\014\n\004rate\030\002 \001" +
+      "(\005\022\r\n\005rate2\030\003 \003(\t\022B\n\013countryRate\030\004 \003(\0132-" +
+      ".market.MarketSummaryRequest.CountryRate" +
+      "Entry\022\036\n\006status\030\005 \001(\0162\016.market.Status\022#\n" +
+      "\006phones\030\006 \003(\0132\023.market.PhoneNumber\0322\n\020Co" +
+      "untryRateEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"\223\002\n\025MarketSummaryResponse\022\017\n\007mess" +
+      "age\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\014\n\004rate\030\003 \001(\005\022" +
+      "\r\n\005rate2\030\004 \003(\t\022C\n\013countryRate\030\005 \003(\0132..ma" +
+      "rket.MarketSummaryResponse.CountryRateEn" +
+      "try\022\036\n\006status\030\006 \001(\0162\016.market.Status\022#\n\006p" +
+      "hones\030\007 \003(\0132\023.market.PhoneNumber\0322\n\020Coun" +
       "tryRateEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"\356\001\n\025MarketSummaryResponse\022\017\n\007messag" +
-      "e\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\014\n\004rate\030\003 \001(\005\022\r\n" +
-      "\005rate2\030\004 \003(\t\022C\n\013countryRate\030\005 \003(\0132..mark" +
-      "et.MarketSummaryResponse.CountryRateEntr" +
-      "y\022\036\n\006status\030\006 \001(\0162\016.market.Status\0322\n\020Cou" +
-      "ntryRateEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001*&\n\006Status\022\010\n\004OPEN\020\000\022\t\n\005HIGHT\020\001\022\007\n\003" +
-      "LOW\020\0022\273\001\n\rMarketSummary\022U\n\024GetResultToda" +
-      "yMarket\022\034.market.MarketSummaryRequest\032\035." +
-      "market.MarketSummaryResponse\"\000\022S\n\022GetWee" +
-      "kTodayMarket\022\034.market.MarketSummaryReque" +
-      "st\032\035.market.MarketSummaryResponse\"\000B)\n\030c" +
-      "om.github.tomj0101.grpcB\013MarketProtoP\001b\006" +
-      "proto3"
+      ":\0028\001*&\n\006Status\022\010\n\004OPEN\020\000\022\t\n\005HIGHT\020\001\022\007\n\003L" +
+      "OW\020\002*+\n\tPhoneType\022\n\n\006MOBILE\020\000\022\010\n\004HOME\020\001\022" +
+      "\010\n\004WORK\020\0022\273\001\n\rMarketSummary\022U\n\024GetResult" +
+      "TodayMarket\022\034.market.MarketSummaryReques" +
+      "t\032\035.market.MarketSummaryResponse\"\000\022S\n\022Ge" +
+      "tWeekTodayMarket\022\034.market.MarketSummaryR" +
+      "equest\032\035.market.MarketSummaryResponse\"\000B" +
+      ")\n\030com.github.tomj0101.grpcB\013MarketProto" +
+      "P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -76,12 +85,18 @@ public final class MarketProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_market_MarketSummaryRequest_descriptor =
+    internal_static_market_PhoneNumber_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_market_PhoneNumber_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_market_PhoneNumber_descriptor,
+        new java.lang.String[] { "Name", "Number", });
+    internal_static_market_MarketSummaryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_market_MarketSummaryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_market_MarketSummaryRequest_descriptor,
-        new java.lang.String[] { "Symbol", "Rate", "Rate2", "CountryRate", "Status", });
+        new java.lang.String[] { "Symbol", "Rate", "Rate2", "CountryRate", "Status", "Phones", });
     internal_static_market_MarketSummaryRequest_CountryRateEntry_descriptor =
       internal_static_market_MarketSummaryRequest_descriptor.getNestedTypes().get(0);
     internal_static_market_MarketSummaryRequest_CountryRateEntry_fieldAccessorTable = new
@@ -89,11 +104,11 @@ public final class MarketProto {
         internal_static_market_MarketSummaryRequest_CountryRateEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_market_MarketSummaryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_market_MarketSummaryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_market_MarketSummaryResponse_descriptor,
-        new java.lang.String[] { "Message", "Symbol", "Rate", "Rate2", "CountryRate", "Status", });
+        new java.lang.String[] { "Message", "Symbol", "Rate", "Rate2", "CountryRate", "Status", "Phones", });
     internal_static_market_MarketSummaryResponse_CountryRateEntry_descriptor =
       internal_static_market_MarketSummaryResponse_descriptor.getNestedTypes().get(0);
     internal_static_market_MarketSummaryResponse_CountryRateEntry_fieldAccessorTable = new

@@ -34,10 +34,15 @@ public class MarketClient {
             business.put("NET", "Netflix");
             business.put("E", "Eat");
 
-            MarketSummaryRequest request = MarketSummaryRequest.newBuilder()
-                    .setSymbol("Google")
-                    .build();
-            MarketSummaryResponse response = blockingStub.getResultTodayMarket(request);
+            PhoneNumber.Builder phoneNumber = PhoneNumber.newBuilder();
+            MarketSummaryRequest.Builder request = MarketSummaryRequest.newBuilder();
+            for (int i = 0; i < 5 ; i++) {
+                phoneNumber.setName("tom").setNumber("876-234-221"+i).build();
+                request.addPhones(phoneNumber);
+            }
+
+            request.setSymbol("Google");
+            MarketSummaryResponse response = blockingStub.getResultTodayMarket(request.build());
 
             logger.info("request from client: " + request);
             logger.info("Response from server: " + response);
