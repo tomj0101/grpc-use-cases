@@ -58,7 +58,13 @@ public class MarketServer {
         @Override
         public void getResultTodayMarket(MarketSummaryRequest request, StreamObserver<MarketSummaryResponse> responseObserver) {
 
-            MarketSummaryResponse response = MarketSummaryResponse.newBuilder().setSymbol(request.getSymbol()).setStatus(Status.OPEN).setRate(12000).setMessage("200 your stock was process "+Status.OPEN).build();
+            MarketSummaryResponse response = MarketSummaryResponse
+                    .newBuilder()
+                    .addAllPhones(request.getPhonesList())
+                    .setSymbol(request.getSymbol())
+                    .setStatus(Status.OPEN)
+                    .setRate(12000)
+                    .setMessage("200 your stock was process "+Status.OPEN).build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
         }

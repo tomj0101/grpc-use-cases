@@ -44,7 +44,6 @@ public class MarketClient {
             request.setSymbol("Google");
             MarketSummaryResponse response = blockingStub.getResultTodayMarket(request.build());
 
-            logger.info("request from client: " + request);
             logger.info("Response from server: " + response);
         } catch (RuntimeException e) {
             logger.log(Level.WARNING, "Request to grpc server failed", e);
